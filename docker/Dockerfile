@@ -24,7 +24,7 @@ RUN   if [ "x$(nproc)" = "x1" ] ; then export USE_PROC=1 ; \
       git checkout tags/${CERES_VERSION} && \
       mkdir build && cd build && \
       cmake .. && \
-      make -j$(USE_PROC) install && \
+      make  install && \
       rm -rf ../../ceres-solver && \
       mkdir -p $CATKIN_WS/src/VINS-Fusion/
 
